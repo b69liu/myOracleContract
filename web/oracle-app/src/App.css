@@ -1,0 +1,48 @@
+.App {
+  display: flex;
+  text-align: center;
+  height: 800px;
+  flex-direction: column;
+  align-items: center;
+  justify-content:  center;
+  
+}
+
+.App button {
+  padding: 0px 10px;
+  font-size: 30px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  color: wheat;
+  background-color: rgb(12, 92, 184);
+  cursor: pointer;
+  align-self: center;
+  margin: 5px;
+}
+
+.App button:hover {background-color: #32b119}
+
+.App button:active {
+  background-color: #32b119;
+  box-shadow: 0 5px rgba(102, 102, 102, 0.288);
+  transform: translateY(4px);
+}
+.App input {
+  height: 30px;
+  width: 300px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+/* .read{
+  background-color: rgba(15, 12, 184, 0.781);
+}
+
+.update{
+  background-color: rgba(12, 58, 184, 0.781);
+} */
+
