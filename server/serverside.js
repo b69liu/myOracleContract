@@ -3,8 +3,8 @@ const web3  = new Web3(new Web3.providers.HttpProvider("http://localhost:7545"))
 const abi = require('./ExchangeRateOracleAbi.json');
 
 // const privateKey =  Buffer.from('40ff2e23b6e73276e1286b1dfcd6354f761a2260ddb7951eb1d6766a2ed18382', 'hex');
-const privateKey =  '0x40ff2e23b6e73276e1286b1dfcd6354f761a2260ddb7951eb1d6766a2ed18382';
-const contractAddress = "0x609Cc7a0b09542e135F643bA1dd38EFb1BBd183d";
+const privateKey =  '0x6d9e734eb90ae9993ea9f1b38e5fc1c45df46605fc531e198fd16a11cc520a72';
+const contractAddress = "0xA0Aa87892944c8548Ea8ff5b6471f30E344B9336";
 const myContract = new web3.eth.Contract(abi, contractAddress);
 const myAccount = web3.eth.accounts.privateKeyToAccount(privateKey);
 
