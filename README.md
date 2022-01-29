@@ -39,7 +39,7 @@ Recently I found a new way to write oracle from solidity's [documentation](https
 
 It is using a request queue to hold all requests and the backend server would received an event and do the work according to the request's content. After the server get the result, it will call the external callback function stored in the task queue in oracle smart contract. As the oracle server becomes a event-driven system, I name it Passive Oracle.
 
-The issue from this method is that the oracle will need to pay the gas fee. To handle it, I design a balance system to require user has to top up enough balance for the gas fee.
+The issue from this method is that the oracle will need to pay the gas fee. To handle it, I initially designed a balance system to require user has to top up enough balance for the gas fee, but I fond it vulnerable to the dos attack, so I later changed it. Now it requires user to decide how much the gas fee would be comsumed and attach it to the query.
 
 The code for this server is in this file Nodejs(\server\passiveServer.js): 
 

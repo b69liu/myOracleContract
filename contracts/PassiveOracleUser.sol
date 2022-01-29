@@ -3,6 +3,7 @@ pragma solidity ^0.8.1;
 
 import './ExchangeRateOraclePassive.sol';
 
+
 contract PassiveOracleUser {
     ExchangeRateOraclePassive private oracle;
     uint public exchangeRate;
@@ -17,9 +18,10 @@ contract PassiveOracleUser {
         oracle = ExchangeRateOraclePassive(newContract);
     }
 
-    function buySomething() public {
+
+    function requestExchangeRate() public payable{
         require(address(oracle)!=address(0x0), "please setup oracle contract");
-        oracle.query("USD", this.oracleResponse);
+        oracle.query{value: msg.value}("USD", this.oracleResponse);
     }
 
     function oracleResponse(uint response) public {
