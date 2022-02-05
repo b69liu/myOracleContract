@@ -52,5 +52,11 @@ npm run passiverServer
 ```
 
 
+## Third party api
+Chainlink provides a decentrolised solution for oracle reqeust.  I tried an example to get random number on Mumbai test network. To use it on different network, please change the contract addresses and the cost in the constractor.  PS: sufficient amount of LINK coins must be transfered to the user's contract before use it.
+
+I think thye met the same problem while calculate the callback's gas fee, and maybe that is why they need to introdue their own ERC20 token(ERC677 specifically). Also they mentioned that if the callback revert, the contract will be banned.
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
